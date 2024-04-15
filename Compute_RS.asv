@@ -10,7 +10,7 @@ rr = 1:ns; rr=mod(rr,nm+1); rr(rr==0)=nm;
 random_indices = randperm(length(rr));
 rr = rr(random_indices); 
 % Time scale and time step
-scale=0.1; dt=scale*1e-1;
+scale=1; dt=scale*1e-1;
 %% Inputs
 % First input signal
 u=@(t) kron(ones(size(B1,2),1),sin(t.^2+t));
