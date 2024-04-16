@@ -11,9 +11,9 @@ MS = 7.8;    % Markersize
 flag=input('Digit 1 for the mass-spring problem, digit 2 for the Stokes problem\n');
 %% Script for Large Scale DAEs
 if flag==1
-    g=400;  %input('Size of the problem g, the dimension will be n=2g+1: \n');
+    g=5000;  %input('Size of the problem g, the dimension will be n=2g+1: \n');
     nm=5;    %input('Number of Modes, minimum 2: \n');
-    tol=1e-10; %input('Accuracy required for the ROM: \n');
+    tol=1e-12; %input('Accuracy required for the ROM: \n');
     n=2*g+1; nf=n-3;
     DAE_Index=3;
     dimKerE=1;

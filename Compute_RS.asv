@@ -22,10 +22,10 @@ TT=8;
 % du=@(t) kron(ones(size(B1,2),1), cos(2*pi*(exp(t/TT))).*(2*pi*exp(t/TT)/TT));
 % ddu=@(t) kron(ones(size(B1,2),1), -sin(2*pi*exp(t/TT)).*((2*pi*exp(t/TT))/TT).^2+ cos(2*pi*(exp(t/TT))).*(2*pi*exp(t/TT)/(TT^2)));
 
-% Simpler Input Signal
-% u=@(t) kron(ones(size(B1,2),1),sin(t));
-% du=@(t) kron(ones(size(B1,2),1), cos(t));
-% ddu=@(t) kron(ones(size(B1,2),1),-sin(t));
+% Third Input Signal (use this signal, scale=1 and  
+u=@(t) kron(ones(size(B1,2),1),sin(t));
+du=@(t) kron(ones(size(B1,2),1), cos(t));
+ddu=@(t) kron(ones(size(B1,2),1),-sin(t));
 
 if flag==2
     ddu=@(t) [];
