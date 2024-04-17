@@ -15,7 +15,7 @@ The folder contains the Matlab codes to perform Model Order Reduction (MOR), bas
 
 Functions:
 
-* **Solve\_LS_GLE**: solve large-scale Generalized Lyapunov Equations----> $AX+X A^T + \sum_{j=1}^{M} (D_j X D_{j}^{T}+B_j B_{j}^{T})=0$ 
+* **Solve\_LS_GLE**: solve large-scale Generalized Lyapunov Equations----> $AX+X A^T + \sum{j=1}{M} (D_j X D_{j}^{T}+B_j B_{j}^{T})=0$ 
 * **solve_KS**: solve large-scale Lyapunov equation of type $AX+XA^T+BB^T=0$ using standard Krylov method; 
 * **solve\_KS_t**: solve large-scale Lyapunov equation of type $A^T X+XA+C^T C=0$ using standard Krylov method.
 
