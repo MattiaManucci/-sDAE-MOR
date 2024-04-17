@@ -1,3 +1,7 @@
+%% Code based on the work:
+%[1] M. Manucci and B. Unger, Balancing-based model reduction for switched descriptor systems
+% ArXiv e-print 2404.10511, 2024.
+%% --------------------------------------------------------------
 function [S,rho] = Solve_LS_GLE(A,S,T,B,nf,tol,flag)
 tol_tSV=0.1*tol; %Truncation tollerance
 opts.maxit=1e3; opts.tol=1e-4; %SVD convergence options

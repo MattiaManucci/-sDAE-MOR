@@ -1,7 +1,3 @@
-%% Code based on the work:
-%[1] M. Manucci and B. Unger, Balancing-based model reduction for switched descriptor systems
-% ArXiv e-print 2404.10511, 2024.
-%% --------------------------------------------------------------
 clc
 clearvars
 close all
@@ -10,6 +6,7 @@ FS = 15;       % Fontsize
 FN = 'times';  % Fontname
 LW = 2;      % Linewidth
 MS = 7.8;    % Markersize
+%% Declare gloabl variable
 %% Declare User Input
 flag=input('Digit 1 for the mass-spring problem, digit 2 for the Stokes problem\n');
 %% Script for Large Scale DAEs

@@ -1,3 +1,7 @@
+%% Code based on the work:
+%[1] M. Manucci and B. Unger, Balancing-based model reduction for switched descriptor systems
+% ArXiv e-print 2404.10511, 2024.
+%% --------------------------------------------------------------
 function [V,Y] = solve_KS_t(A,S,T,B,nf,tol,k)
 % Iteration 0
 n=size(A,1);

@@ -1,3 +1,7 @@
+%% Code based on the work:
+%[1] M. Manucci and B. Unger, Balancing-based model reduction for switched descriptor systems
+% ArXiv e-print 2404.10511, 2024.
+%% --------------------------------------------------------------
 %% Compute reduced solution and errors
 rv=input('Size of the reduced problems: \n'); %You can also inset a vector here
 nr=numel(rv);
