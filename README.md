@@ -1,8 +1,11 @@
-# sDAE-MOR
-The folder contains the Matlab codes to perform Model Order Reduction (MOR), based on balancing, for control systems of switched Differential Algebraic Equation (sDAE). The method is described in **[1]**.
+[![arXiv][arxiv-shield]][arxiv-url]
+[![DOI][doi-shield]][doi-url]
+
+# [sDAE-MOR][arxiv-url]
+The folder contains the Matlab codes to perform Model Order Reduction (MOR), based on balancing, for control systems of switched Differential-Algebraic Equations (sDAE). The method is described in the paper [Balancing-based model reduction for switched descriptor systems][arxiv-url].
 
 
-Main scripts:
+##Code info:
 
 * **MOR_sDAE**: the main script to run, it constructs the projection spaces used to build the reduced system. Two test problems are included:
   * Constrained mass-sping system
@@ -12,18 +15,38 @@ Main scripts:
 
 Functions:
 
-* **Solve\_LS_GLE**: solve large-scale Generalized Lyapunov Equations---->AX+XA^T+\sum_{j=1}^{M}(D\_jXD\_j^T+B\_jB\_j^T)=0
-* **solve_KS**: solve large-scale Lyapunov equation using standard Krylov method: AX+XA^T+BB^T=0
-* **solve\_KS_t**: solve large-scale Lyapunov equation using standard Krylov method: A^TX+XA+C^TC=0
+* **Solve\_LS_GLE**: solve large-scale Generalized Lyapunov Equations---->$AX+XA^T+\sum_{j=1}^{M}(D_jXD_j^T+B_jB_j^T)=0$
+* **solve_KS**: solve large-scale Lyapunov equation of type $AX+XA^T+BB^T=0$ using standard Krylov method; 
+* **solve\_KS_t**: solve large-scale Lyapunov equation of type $A^T X+XA+C^T C=0$ using standard Krylov method.
 
-<span style="color: blue;"><large>**Contacts**:</large></span>
+
+## Citing
+If you use this project for academic work, please consider citing our
+[publication][arxiv-url]:
+
+    M. Manucci and B. Unger
+    Balancing-based model reduction for switched descriptor systems
+    ArXiv e-print 2404.10511, 2024.
+    
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+## Contacts
 
 * Mattia Manucci - [mattia.manucci@simtech.uni-stuttgart.de](mattia.manucci@simtech.uni-stuttgart.de)
 * Benjamin Unger - [benjamin.unger@simtech.uni-stuttgart.de](benjamin.unger@simtech.uni-stuttgart.de)
 
-<span style="color: blue;">**References**:</span>
 
-**[1]** To be inserted...
+
+[doi-shield]: https://img.shields.io/badge/DOI-10.5281%20%2F%20zenodo.8335231-blue.svg?style=for-the-badge
+[doi-url]: https://zenodo.org/records/10948132
+[arxiv-shield]: https://img.shields.io/badge/arXiv-2204.13474-b31b1b.svg?style=for-the-badge
+[arxiv-url]:http://arxiv.org/abs/2404.10511
+
+
+
+
 
 
 
