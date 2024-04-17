@@ -10,7 +10,7 @@ rr = 1:ns; rr=mod(rr,nm+1); rr(rr==0)=nm;
 random_indices = randperm(length(rr));
 rr = rr(random_indices); 
 % Time scale and time step
-scale=1; dt=scale*1e-1;
+scale=0.1; dt=scale*1e-1;
 %% Inputs
 % First input signal
 u=@(t) kron(ones(size(B1,2),1),sin(t.^2+t));
@@ -22,11 +22,12 @@ TT=8;
 % du=@(t) kron(ones(size(B1,2),1), cos(2*pi*(exp(t/TT))).*(2*pi*exp(t/TT)/TT));
 % ddu=@(t) kron(ones(size(B1,2),1), -sin(2*pi*exp(t/TT)).*((2*pi*exp(t/TT))/TT).^2+ cos(2*pi*(exp(t/TT))).*(2*pi*exp(t/TT)/(TT^2)));
 
-% Third Input Signal (use this signal, scale=1 and  
-u=@(t) kron(ones(size(B1,2),1),sin(t));
-du=@(t) kron(ones(size(B1,2),1), cos(t));
-ddu=@(t) kron(ones(size(B1,2),1),-sin(t));
-
+%% Third Input Signal (use this signal, scale=1 and  10 switches to reproduce Figure 2 (left) and Figure 1 (right))
+% scale=1;
+% u=@(t) kron(ones(size(B1,2),1),sin(t));
+% du=@(t) kron(ones(size(B1,2),1), cos(t));
+% ddu=@(t) kron(ones(size(B1,2),1),-sin(t));
+%% ----------------------------------------------------------------------------------------------------
 if flag==2
     ddu=@(t) [];
 end
@@ -120,9 +121,9 @@ for i=1:ns
 
     if i==1
         % Because of the legend here is always plotted the first output
-        plot(tspan{i},(y{i}(1,:)'),'--b','LineWidth',LW)
+        plot(tspan{i},(y{i}(2,:)'),'--b','LineWidth',LW)
         hold on
-        plot(tspan{i},(yred{i,rP}(1,:)'),'-r','LineWidth',LW)
+        plot(tspan{i},(yred{i,rP}(2,:)'),'-r','LineWidth',LW)
 
     end
     plot(tspan{i},(y{i}(Out_to_Plot,:)'),'-b','LineWidth',LW)
@@ -140,6 +141,7 @@ title(['Number of modes ' num2str(nm) ', Number of switches ' num2str(ns-1)], 'I
 
 set(gca,'Fontname',FN,'Fontsize',FS);
 set(gcf, 'Color', 'w');
+
 
 
 %% Computing L_2 errors using trapezoidal quadrature rule

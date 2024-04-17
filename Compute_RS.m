@@ -10,7 +10,7 @@ rr = 1:ns; rr=mod(rr,nm+1); rr(rr==0)=nm;
 random_indices = randperm(length(rr));
 rr = rr(random_indices); 
 % Time scale and time step
-scale=1; dt=scale*1e-1;
+scale=0.1; dt=scale*1e-1;
 %% Inputs
 % First input signal
 u=@(t) kron(ones(size(B1,2),1),sin(t.^2+t));
@@ -23,6 +23,7 @@ TT=8;
 % ddu=@(t) kron(ones(size(B1,2),1), -sin(2*pi*exp(t/TT)).*((2*pi*exp(t/TT))/TT).^2+ cos(2*pi*(exp(t/TT))).*(2*pi*exp(t/TT)/(TT^2)));
 
 %% Third Input Signal (use this signal, scale=1 and  10 switches to reproduce Figure 2 (left) and Figure 1 (right))
+% scale=1;
 % u=@(t) kron(ones(size(B1,2),1),sin(t));
 % du=@(t) kron(ones(size(B1,2),1), cos(t));
 % ddu=@(t) kron(ones(size(B1,2),1),-sin(t));
